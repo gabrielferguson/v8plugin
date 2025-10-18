@@ -18,6 +18,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        // 只构建 arm64-v8a
+        ndk {
+            abiFilters += listOf("arm64-v8a")
+        }
     }
 
     buildTypes {
